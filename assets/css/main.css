@@ -1,16 +1,16 @@
 /* ============================================================
    Thiago Aires — personal site
    Design language: Vodafone-inspired (see DESIGN.md)
-   Single accent: #6A9B7C (sage green, pulled from the avatar's t-shirt)
+   Single accent: #5FA078 (sage green inspired by the avatar's t-shirt, nudged livelier)
    Ink/Canvas band rhythm · 800 uppercase display
    ============================================================ */
 
 :root {
   /* Colors */
-  /* Accent pulled directly from the avatar's t-shirt palette:
-     #6A9B7C = main shirt body, #3E6F50 = deepest shadow. */
-  --primary: #6A9B7C;
-  --primary-deep: #3E6F50;
+  /* Accent inspired by the avatar's t-shirt palette (#6A9B7C / #3E6F50),
+     nudged a touch more vivid for screen contrast. */
+  --primary: #5FA078;
+  --primary-deep: #347451;
   --on-primary: #ffffff;
   --ink: #25282b;
   --ink-soft: #3a3d40;
@@ -207,7 +207,7 @@ button {
 }
 
 .hl {
-  background: linear-gradient(180deg, transparent 62%, rgba(106, 155, 124, 0.32) 62%);
+  background: linear-gradient(180deg, transparent 62%, rgba(95, 160, 120, 0.34) 62%);
   padding-inline: 2px;
 }
 
@@ -430,8 +430,8 @@ html[lang="pt"] [data-lang="en"]:not(.lang-btn) {
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(80% 60% at 85% 20%, rgba(106, 155, 124, 0.38), transparent 60%),
-    radial-gradient(60% 60% at 0% 100%, rgba(106, 155, 124, 0.14), transparent 55%);
+    radial-gradient(80% 60% at 85% 20%, rgba(95, 160, 120, 0.38), transparent 60%),
+    radial-gradient(60% 60% at 0% 100%, rgba(95, 160, 120, 0.14), transparent 55%);
   mix-blend-mode: screen;
   opacity: 0.9;
 }
@@ -499,7 +499,7 @@ html[lang="pt"] [data-lang="en"]:not(.lang-btn) {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(160deg, rgba(106, 155, 124, 0.0) 60%, rgba(106, 155, 124, 0.22) 100%);
+    linear-gradient(160deg, rgba(95, 160, 120, 0.0) 60%, rgba(95, 160, 120, 0.22) 100%);
   z-index: 2;
   pointer-events: none;
 }
