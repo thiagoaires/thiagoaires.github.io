@@ -416,47 +416,6 @@ html[lang="pt"] [data-lang="en"]:not(.lang-btn) {
   display: none !important;
 }
 
-/* ---------- Speechmark orb ---------- */
-.speechmark {
-  background: var(--primary);
-  color: var(--on-primary);
-  border-radius: var(--r-sm);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  flex-shrink: 0;
-}
-
-.speechmark::before {
-  content: "";
-  position: absolute;
-  background: var(--on-primary);
-  /* Vodafone-style speechmark: a quote-tail orb. */
-  width: 38%;
-  height: 38%;
-  border-radius: 50% 50% 50% 0;
-  transform: rotate(45deg);
-  top: 22%;
-  left: 32%;
-}
-
-.speechmark--xs {
-  width: 22px;
-  height: 22px;
-}
-
-.speechmark--md {
-  width: 44px;
-  height: 44px;
-}
-
-.speechmark--lg {
-  width: clamp(64px, 8vw, 96px);
-  height: clamp(64px, 8vw, 96px);
-  border-radius: 10px;
-}
-
 /* ---------- HERO ---------- */
 .hero {
   position: relative;
@@ -556,14 +515,6 @@ html[lang="pt"] [data-lang="en"]:not(.lang-btn) {
 
 .hero-portrait:hover .portrait-frame img {
   transform: scale(1.04);
-}
-
-.speechmark--lg {
-  position: absolute;
-  bottom: -28px;
-  left: -28px;
-  box-shadow: 0 12px 30px -8px rgba(62, 111, 80, 0.55);
-  z-index: 3;
 }
 
 /* Ticker */
