@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GMA-3122 — Deep links de vitrines Emarsys (QA)</title>
+<style>
+  body { font-family: -apple-system, Roboto, sans-serif; margin: 16px; background: #F8F8F8; color: #3D3935; }
+  h1 { font-size: 18px; }
+  p.note { font-size: 13px; color: #726E74; }
+  a.btn { display: block; margin: 10px 0; padding: 14px 16px; background: #E04403; color: #fff;
+          border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; }
+  a.btn small { display: block; font-weight: 400; font-size: 11px; opacity: .85; margin-top: 4px; word-break: break-all; }
+</style>
+</head>
+<body>
+<h1>GMA-3122 — Deep links de vitrines Emarsys</h1>
+<p class="note">Abra esta página no Chrome do aparelho com o app Swift (build prod) instalado e toque em cada caso. Validação de conteúdo só em PROD (QA não tem base Emarsys).</p>
+
+<a class="btn" href="swift://showcase?logic1=PERSONAL&title1=Selecionados%20para%20voce">1. Uma vitrine — PERSONAL
+<small>swift://showcase?logic1=PERSONAL&amp;title1=Selecionados para voce</small></a>
+
+<a class="btn" href="swift://showcase?title=Ofertas&logic1=PERSONAL&title1=Selecionados&logic2=POPULAR&categoryPath2=Bovinos&title2=Mais%20vendidos&logic3=CART&title3=Combina%20com%20seu%20carrinho">2. Três vitrines — PERSONAL + POPULAR + CART
+<small>título da página "Ofertas"; POPULAR pode vir vazia (colapsa)</small></a>
+
+<a class="btn" href="swift://showcase?logic1=SEARCH&searchTerm1=picanha&title1=Baseado%20na%20sua%20busca">3. SEARCH — searchTerm=picanha</a>
+
+<a class="btn" href="swift://showcase?logic1=RELATED&itemViewId1=616859&title1=Relacionados">4. RELATED — itemViewId=616859</a>
+
+<a class="btn" href="swift://showcase?logic1=INVALIDA&logic2=RELATED">5. Link inválido — página com estado vazio, sem crash
+<small>logic1 desconhecida + RELATED sem itemViewId</small></a>
+
+<a class="btn" href="swift://showcase?logic1=POPULAR&categoryPath1=Bovinos&title1=Bovinos&logic2=POPULAR&categoryPath2=Aves&title2=Aves">6. Mesma logic 2x — POPULAR Bovinos + POPULAR Aves
+<small>duas vitrines independentes (conteúdo pode repetir — limitação conhecida)</small></a>
+</body>
+</html>
